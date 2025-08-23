@@ -823,7 +823,7 @@ header ul a:hover{
     width: 0%;
     background-color: #000000b8;
     z-index: 999;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.479);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     opacity: 0;
     border-bottom-left-radius: 100%;
