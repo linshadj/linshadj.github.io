@@ -647,7 +647,7 @@ header ul a:hover{
   /* CONTACT SECTION */
 .contact-section{
     width: 80%;
-    height: 100vh;
+    height: 130vh;
     display: flex;
     justify-content: center;
     gap: 10%;
@@ -657,7 +657,7 @@ header ul a:hover{
 
 .contact-section h1{
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 40%;
 }
 
@@ -693,6 +693,10 @@ header ul a:hover{
     max-width: 400px;
     margin-top: 30px;
     margin-bottom: 5px;
+} 
+
+.contact-box p.error{
+    margin-top: 5px;
 } 
 
 .contact-box input{
@@ -903,8 +907,11 @@ header ul a:hover{
 }
 
 
+/* ERROR MSG */
 
-
+.error{
+    color: rgb(200, 0, 0);
+}
 
 
 @media (max-aspect-ratio: 16/9){

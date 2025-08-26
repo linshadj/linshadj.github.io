@@ -190,15 +190,22 @@
             <div class="contact-box autoBlur">
                 <p class="contact-heading">Whether you're looking to build a new website, improve your existing platform, or bring a unique project to file. i'm here to help.</p>
                 
-                <form action="https://formspree.io/f/xjkoqzzw" method="POST">
+                <form name="sentMessage" id="contactForm" onsubmit="return handleFormSubmit(event)">
                 <p>Full Name</p>
-                <input name="name" placeholder="Your Full name" type="name" required>
+                <input id="name" name="name" placeholder="Your Full name" type="text">
+                <p id="err-name" class="error"></p>
 
                 <p>Email Address</p>
-                <input name="email" placeholder="Your Email" type="email" required>
+                <input id="email" name="email" placeholder="Your Email" type="email" >
+                <p id="err-email" class="error"></p>
+
+                <p>Subject</p>
+                <input id="subject" name="subject" placeholder="Subject" type="text">
+                <p id="err-subject" class="error"></p>
 
                 <p>Your Message</p>
-                <textarea name="message"  class="input-message" type="text" placeholder="share your thoughts..." required rows="6"></textarea>
+                <textarea id="message" name="message"  class="input-message"  placeholder="How can i help you?" rows="6"></textarea>
+                <p id="err-message" class="error"></p>
 
                 <button type="submit">Send Message <i class='bx bx-mail-send'></i></button>
                 </form>
@@ -218,6 +225,18 @@
         
     </div>
     <script src="app.js"></script>
+    <script src="email.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "0tdtLkf0GbuIcPJbz",
+            });
+        })();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script >
       AOS.init();
